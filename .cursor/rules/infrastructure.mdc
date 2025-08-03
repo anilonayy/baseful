@@ -1,0 +1,13 @@
+---
+rule_type: always
+description: "DevOps, environment, Docker, deployment"
+globs: ["Dockerfile", "Makefile", "docker-compose*.yml", ".env*"]
+---
+
+- Use Makefile for consistent Docker-based workflows: `make start-dev`, `make up`, `make migrate`, etc.
+- Use Docker for both development and production environments.
+- Always define `.env.local` and `.env.example` files. Keep secrets out of version control.
+- PostgreSQL should be managed via Drizzle and migrations tracked via `db:generate` and `db:migrate`.
+- Use Drizzle Studio (`npm run db:studio`) for inspecting DB schema.
+- Ensure all services defined in Docker Compose are independently testable.
+- Expose ports only when necessary and keep container names consistent.

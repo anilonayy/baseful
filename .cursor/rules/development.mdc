@@ -1,0 +1,15 @@
+---
+rule_type: always
+description: "Business logic, naming conventions, types"
+globs: ["src/**/*.ts", "src/**/*.tsx"]
+---
+
+- Use functional and declarative programming patterns. Avoid classes.
+- Use descriptive variable names with auxiliary verbs (e.g., `isLoading`, `hasError`).
+- Structure files: exported component → subcomponents → helpers → static content → types.
+- Always write type-safe logic using TypeScript.
+- Prefer interfaces over types. Avoid enums; use maps instead.
+- Write pure functions using the `function` keyword (no arrow functions for top-level logic).
+- Avoid unnecessary curly braces in conditionals; use concise syntax where applicable.
+- Avoid code duplication through modularization and reuse patterns.
+- Always use es6 functions.

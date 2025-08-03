@@ -1,0 +1,16 @@
+---
+rule_type: always
+description: "Styling, layout, and component conventions"
+globs: ["src/components/**/*.tsx", "src/app/**/*.tsx"]
+---
+
+- Use Shadcn UI components and Tailwind CSS for styling.
+- Always use Shadcn UI components if you can.
+- If any shadcn blcoks exists for you context please use them directly, you can reach how to impelment it via context7.
+- Use declarative JSX. Avoid imperative DOM manipulation.
+- Use consistent spacing, alignment, and sizing using Tailwind utilities.
+- Use lowercase-dash naming for component folders (e.g., `auth-wizard`).
+- All components go in `src/components`, named as `new-component.tsx` with named exports.
+- Private components go in `_components` inside `src/app/<feature>/`.
+- Shared UI components live under `src/components/ui/`.
+- Organize by type (`/ui`, `/forms`, `/layout`) or by feature for scale.

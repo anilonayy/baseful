@@ -1,0 +1,17 @@
+// .cursor/rules/frameworks.mdc
+---
+rule_type: always
+description: "Framework usage: Next.js, Drizzle, Zod, BetterAuth, TanStack Query"
+globs: ["src/**/*.ts", "src/**/*.tsx"]
+---
+
+- Use React Server Components (RSC) where possible; minimize `use client` usage.
+- Wrap client components in `<Suspense>` with proper fallback UI.
+- Use dynamic imports (`next/dynamic`) for non-critical components.
+- Use TanStack Query for all server data fetching. Configure it in `providers.tsx`.
+- Use Zod for all form and schema validations. Integrate with `react-hook-form`.
+- Use BetterAuth for modern, secure authentication. Configure in `auth.ts`.
+- Use `nuqs` to manage URL search parameter state.
+- Optimize Web Vitals (LCP, CLS, FID). Load images in WebP format with dimensions set and lazy loading enabled.
+- Organize `/src` as the root with `/src/app` for routes and `/src/components` for shared UI.
+
